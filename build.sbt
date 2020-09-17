@@ -1,7 +1,7 @@
 Global / onChangedBuildSource := ReloadOnSourceChanges
 
 ThisBuild / githubOwner := "MakeNowJust-Labo"
-ThisBuild / githubRepository := "template-scala"
+ThisBuild / githubRepository := "scala-gitignore"
 
 ThisBuild / scalaVersion := "2.13.3"
 ThisBuild / scalacOptions ++= Seq(
@@ -23,10 +23,10 @@ lazy val root = project
   .in(file("."))
   .settings(
     organization := "codes.quine.labo",
-    name := "template",
+    name := "gitignore",
     version := "0.1.0-SNAPSHOT",
     console / initialCommands := """
-      |import codes.quine.labo.template._
+      |import codes.quine.labo.gitignore._
       """.stripMargin,
     Compile / console / scalacOptions -= "-Wunused",
     // Set URL mapping of scala standard API for Scaladoc.

@@ -1,6 +1,6 @@
-# template-scala
+# scala-gitignore
 
-> MakeNowJust-Labo's Scala project template.
+> `.gitignore` file traverse algorithm implementation.
 
 ## License
 
