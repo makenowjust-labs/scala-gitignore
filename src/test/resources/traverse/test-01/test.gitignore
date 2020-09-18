@@ -3,3 +3,6 @@ test.gitignore
 test.txt
 
 foo.txt
+*.txt0
+foo.t?t1
+foo.t[x-z][!a-su-z]2

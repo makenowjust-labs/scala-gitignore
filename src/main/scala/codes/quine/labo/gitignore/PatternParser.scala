@@ -37,7 +37,7 @@ final class PatternParser(val base: Path) {
     P("?" ~ Pass(Question) | "*" ~ Pass(Star) | range | !(spaces ~ End) ~ char.map(Literal(_)))
 
   def range[_: P]: P[Range] =
-    P(("[" ~/ ("^" ~ Pass(true) | Pass(false)) ~ (!"]" ~ rangePart).rep ~ "]").map { case (ne, r) => Range(ne, r) })
+    P(("[" ~/ ("!" ~ Pass(true) | Pass(false)) ~ (!"]" ~ rangePart).rep ~ "]").map { case (ne, r) => Range(ne, r) })
 
   def rangePart[_: P]: P[(Char, Char)] =
     P(char ~ "-" ~ char | char.map(c => (c, c)))

@@ -1,0 +1,2 @@
+dir/bar.txt
+dir/foo/bar.txt

@@ -9,7 +9,8 @@ ThisBuild / scalacOptions ++= Seq(
   "UTF-8",
   "-feature",
   "-deprecation",
-  "-Wunused"
+  "-Wunused",
+  "-language:implicitConversions"
 )
 
 // Scalafix config:
@@ -40,5 +41,13 @@ lazy val root = project
     libraryDependencies += "com.lihaoyi" %% "fastparse" % "2.2.2",
     // Settings for test:
     libraryDependencies += "io.monix" %% "minitest" % "2.8.2" % Test,
-    testFrameworks += new TestFramework("minitest.runner.Framework")
+    testFrameworks += new TestFramework("minitest.runner.Framework"),
+    doctestTestFramework := DoctestTestFramework.Minitest,
+    doctestMarkdownEnabled := true,
+    // Surpress warnings in doctest generated files.
+    libraryDependencies ++= Seq(
+      compilerPlugin("com.github.ghik" % "silencer-plugin" % "1.7.1" cross CrossVersion.full),
+      "com.github.ghik" % "silencer-lib" % "1.7.1" % Provided cross CrossVersion.full
+    ),
+    scalacOptions += "-P:silencer:globalFilters=toVoid is never used"
   )

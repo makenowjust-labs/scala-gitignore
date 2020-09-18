@@ -16,6 +16,6 @@ final case class IgnoreFile(patterns: Seq[Pattern]) {
 }
 
 object IgnoreFile {
-  def load(path: Path, base: Option[Path] = None): IgnoreFile =
-    IgnoreFile(PatternParser.parse(Source.fromFile(path.toFile).mkString, base.getOrElse(path.getParent)))
+  def load(path: Path, base: Path): IgnoreFile =
+    IgnoreFile(PatternParser.parse(Source.fromFile(path.toFile).mkString, base))
 }

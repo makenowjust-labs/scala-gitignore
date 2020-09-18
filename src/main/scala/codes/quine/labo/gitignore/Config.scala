@@ -45,7 +45,7 @@ object Config {
         (ignorePath, base), {
           val ignoreFile = ignorePath.toFile
           if (ignoreFile.exists && ignoreFile.isFile && ignoreFile.canRead) {
-            val ignore = IgnoreFile.load(ignorePath, Some(base))
+            val ignore = IgnoreFile.load(ignorePath, base)
             Some(ignore)
           } else None
         }

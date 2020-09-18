@@ -32,7 +32,7 @@ object GitIgnoreSuite extends SimpleTestSuite {
     override def rootIgnoreFile(rootPath: Path): Seq[Path] = Seq.empty
   }
 
-  for (i <- (1 to 2)) {
+  for (i <- (1 to 3)) {
     test(f"GitIgnore.traverse: test-$i%02d") {
       val rootPath = Resource.traversePath(Path.of(f"test-$i%02d")).toAbsolutePath
       val txtPath = rootPath.resolve("test.txt")
