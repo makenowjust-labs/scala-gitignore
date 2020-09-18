@@ -25,7 +25,7 @@ lazy val root = project
   .settings(
     organization := "codes.quine.labo",
     name := "gitignore",
-    version := "0.1.0-SNAPSHOT",
+    version := "0.1.0",
     console / initialCommands := """
       |import java.nio.file.Path
       |
