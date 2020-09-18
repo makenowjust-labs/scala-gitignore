@@ -1,6 +1,6 @@
 # scala-gitignore
 
-> `.gitignore` file traverse algorithm implementation.
+> [`.gitignore`](https://git-scm.com/docs/gitignore) file traverse algorithm implementation.
 
 ## Example
 
@@ -18,6 +18,12 @@ scala> {
      | }
 res0: List[String] = List(project/build.properties, project/plugin.sbt)
 ```
+
+## Features
+
+  - Nested `.gitignore` is supported.
+  - Complex glob syntax works.
+  - Ignore filenames can be customized.
 
 ## License
 
