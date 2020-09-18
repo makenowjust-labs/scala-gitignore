@@ -1,0 +1,12 @@
+# test-01: simple glob patterns
+
+foo
+foo/
+/foo
+/foo/
+foo
+
+foo/bar
+foo/bar/
+/foo/bar
+/foo/bar/

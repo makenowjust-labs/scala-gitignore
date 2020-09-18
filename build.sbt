@@ -26,6 +26,8 @@ lazy val root = project
     name := "gitignore",
     version := "0.1.0-SNAPSHOT",
     console / initialCommands := """
+      |import java.nio.file.Path
+      |
       |import codes.quine.labo.gitignore._
       """.stripMargin,
     Compile / console / scalacOptions -= "-Wunused",
@@ -34,6 +36,8 @@ lazy val root = project
       .filter(file => file.getName.startsWith("scala-library") && file.getName.endsWith(".jar"))
       .map(_ -> url(s"http://www.scala-lang.org/api/${scalaVersion.value}/"))
       .toMap,
+    // Dependencies:
+    libraryDependencies += "com.lihaoyi" %% "fastparse" % "2.2.2",
     // Settings for test:
     libraryDependencies += "io.monix" %% "minitest" % "2.8.2" % Test,
     testFrameworks += new TestFramework("minitest.runner.Framework")

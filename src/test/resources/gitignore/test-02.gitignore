@@ -1,0 +1,15 @@
+# test-02: complex glob syntax
+
+*
+fizz*
+*buzz
+??zz??zz
+
+[bf][iu]zz[bf][iu]zz
+[b-f][i-u]zz[b-f][i-u]zz
+[a-bf][i-ju]zz[bd-f][iu-v]zz
+
+**/foo
+bar/**
+foo/**/bar
+foo**bar

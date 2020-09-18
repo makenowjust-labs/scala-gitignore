@@ -1,0 +1,8 @@
+.root
+test.gitignore
+test.txt
+
+foo
+
+bar/*
+!bar.txt
