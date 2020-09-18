@@ -57,7 +57,7 @@ object Config {
     def rootIgnoreFile(rootPath: Path): Seq[Path] = {
       val home = System.getProperty("user.home")
       Seq(
-        // TODO:
+        // TODO: Read `git config core.excludeFile` instead.
         Path.of(home, ".config/git/ignore"),
         rootPath.resolve(".git/info/exclude")
       )
