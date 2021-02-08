@@ -1,10 +1,9 @@
 package codes.quine.labo.gitignore
 
-import java.nio.file.Path
-
-import scala.io.Source
-
 import minitest.SimpleTestSuite
+
+import java.nio.file.Path
+import scala.io.Source
 
 object GitIgnoreSuite extends SimpleTestSuite {
   class TestConfig extends Config.Default {

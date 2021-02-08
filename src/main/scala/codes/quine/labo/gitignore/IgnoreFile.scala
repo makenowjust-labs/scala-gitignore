@@ -1,7 +1,6 @@
 package codes.quine.labo.gitignore
 
 import java.nio.file.Path
-
 import scala.io.Source
 
 final case class IgnoreFile(patterns: Seq[Pattern]) {

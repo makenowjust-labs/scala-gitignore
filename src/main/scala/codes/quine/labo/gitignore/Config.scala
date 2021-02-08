@@ -1,7 +1,6 @@
 package codes.quine.labo.gitignore
 
 import java.nio.file.Path
-
 import scala.collection.mutable
 
 trait Config {

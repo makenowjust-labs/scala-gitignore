@@ -1,9 +1,9 @@
 package codes.quine.labo.gitignore
 
-import java.nio.file.Path
-
 import fastparse.NoWhitespace._
 import fastparse._
+
+import java.nio.file.Path
 
 import Pattern._
 
