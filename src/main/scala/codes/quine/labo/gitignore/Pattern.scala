@@ -1,7 +1,6 @@
 package codes.quine.labo.gitignore
 
 import java.nio.file.Path
-
 import scala.annotation.tailrec
 import scala.jdk.CollectionConverters._
 
