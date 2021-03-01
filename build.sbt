@@ -40,7 +40,7 @@ lazy val root = project
     // Dependencies:
     libraryDependencies += "com.lihaoyi" %% "fastparse" % "2.3.1",
     // Settings for test:
-    libraryDependencies += "io.monix" %% "minitest" % "2.9.2" % Test,
+    libraryDependencies += "io.monix" %% "minitest" % "2.9.3" % Test,
     testFrameworks += new TestFramework("minitest.runner.Framework"),
     doctestTestFramework := DoctestTestFramework.Minitest,
     doctestMarkdownEnabled := true,
